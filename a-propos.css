@@ -1,0 +1,123 @@
+/* Reset simple */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #222;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,255,0,0.3);
+}
+
+header h1 {
+  color: #00ff00;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #00ff00;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid #00ff00;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+ul li::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  color: #00ff00;
+  font-size: 1.2rem;
+  top: 0;
+  line-height: 1;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #00ff00;
+  color: #111;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00cc00;
+}
+
+footer {
+  background-color: #222;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #666;
+  box-shadow: inset 0 1px 3px rgba(0,255,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    margin: 20px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}

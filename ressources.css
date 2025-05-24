@@ -1,0 +1,179 @@
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0b3d0b, #052205);
+  color: #d4f8d4;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fond 3D graphique bougies */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    url('https://i.imgur.com/lfFQKi6.png'),  /* exemple graphique bougies vertes */
+    url('https://i.imgur.com/5xaDB3X.png'); /* exemple bougies rouges */
+  background-repeat: repeat-x, repeat-x;
+  background-position: bottom left, bottom right;
+  background-size: 300px 150px, 300px 150px;
+  opacity: 0.08;
+  filter: blur(8px);
+  pointer-events: none;
+  z-index: -1;
+  animation: slowMove 60s linear infinite;
+}
+
+/* Animation lente déplacement fond */
+@keyframes slowMove {
+  0% { background-position: left bottom, right bottom; }
+  100% { background-position: right bottom, left bottom; }
+}
+
+/* Titres */
+h1, h2 {
+  color: #76d776;
+  text-shadow:
+    0 0 8px #76d776,
+    0 0 15px #3a8b3a;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Sections */
+section {
+  background: rgba(5, 45, 5, 0.85);
+  padding: 25px 30px;
+  border-radius: 15px;
+  margin-bottom: 35px;
+  box-shadow:
+    0 0 20px #3a8b3a;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 0 40px #62bf62;
+}
+
+/* Glossaire */
+.glossaire {
+  width: 100%;
+  margin-bottom: 20px ;
+}
+
+.glossaire ul {
+  list-style: none;
+  padding-left: 0;
+  columns: 2;
+  column-gap: 50px;
+  font-size: 1.1rem;
+}
+
+.glossaire li {
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  color: #c4f4c4;
+}
+
+.glossaire li::before {
+  content: "✓";
+  color: #4CAF50;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Iframes YouTube centrés et stylés */
+.youtube-video {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.youtube-video iframe {
+  width: 100%;
+  max-width: 760px;
+  height: 430px;
+  border-radius: 15px;
+  box-shadow:
+    0 0 15px #4caf50;
+  transition: transform 0.3s ease;
+}
+
+.youtube-video iframe:hover {
+  transform: scale(1.05);
+}
+
+/* Articles (liens) */
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.articles a {
+  display: inline-block;
+  background: #e20b32;
+  padding: 12px 18px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow:
+    0 0 8px #e41616;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
+}
+
+.articles a:hover {
+  background: #3a8b3a;
+  box-shadow:
+    0 0 15px #76d776;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .glossaire ul {
+    columns: 1;
+  }
+
+  .youtube-video iframe {
+    height: 250px;
+  }
+
+  .articles a {
+    max-width: 100%;
+  }
+}
+section[data-animate] {
+  opacity: 0;
+  transform: scale(0.9) translateZ(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}

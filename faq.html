@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Questions Fréquentes</title>
+  <link rel="stylesheet" href="faq.css" />
+    <link rel="icon" type="image/svg+xml" href="favincon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+</head>
+<body>
+  <section class="faq-section">
+    <h1 class="faq-title">Foire Aux Questions</h1>
+
+    <div class="faq-item">
+      <button class="faq-question">1. C’est quoi le trading ? &#9660;</button>
+      <div class="faq-answer">
+        Le trading consiste à acheter et vendre des actifs financiers pour réaliser des profits à court ou long terme.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">2. Est-ce que je peux apprendre le trading sans expérience ? &#9660;</button>
+      <div class="faq-answer">
+        Oui, nos formations sont conçues pour les débutants. Nous partons des bases jusqu’aux stratégies avancées.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">3. Où puis-je voir les signaux de trading ? &#9660;</button>
+      <div class="faq-answer">
+        Dans la section « Découvrir nos outils », cliquez sur « Intégrer mon canal de signaux journaliers » pour y accéder via WhatsApp.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">4. Que contient la formation sur la méthode ICT ? &#9660;</button>
+      <div class="faq-answer">
+        Elle comprend l’analyse des liquidités, les points d’entrée stratégiques, la structure du marché et les techniques institutionnelles.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">5. Est-ce que vous proposez un accompagnement ? &#9660;</button>
+      <div class="faq-answer">
+        Oui, nous proposons des groupes d’assistance et un suivi régulier pour répondre à toutes vos questions.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">6. Comment puis-je m’inscrire à une formation ? &#9660;</button>
+      <div class="faq-answer">
+        Cliquez sur « Suivre cette formation » dans la section concernée, un lien WhatsApp pré-rempli sera généré pour vous inscrire.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">7. Vos formations sont-elles certifiantes ? &#9660;</button>
+      <div class="faq-answer">
+        Non, elles ne sont pas encore certifiantes, mais elles offrent un apprentissage structuré avec des résultats concrets sur le marché.
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+  <div class="footer-content">
+    <p>Besoin d'aide ? <a href="contact.html" class="footer-link">Contactez-nous</a></p>
+    <p>Ou visitez nos différents réseaux sociaux :</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/share/1AcwFNxbhj/" target="_blank" class="footer-icon facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/0713621898" target="_blank" class="footer-icon whatsapp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:snowdenyves@gmail.com" class="footer-icon gmail" title="Gmail">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p class="footer-rights">© 2025 TradingPro Tous droits réservés.</p>
+  </div>
+</footer>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+        const answer = btn.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

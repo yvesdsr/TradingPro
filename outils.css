@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: #00ff00;
+}
+section {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+h2 {
+  color: #00ff00;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  border-left: 4px solid #00ff00;
+  padding-left: 12px;
+}
+p.description {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+/* Signaux & Analyses */
+.item-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.item-list li {
+  background: #222;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,255,0,0.2);
+  transition: background 0.3s ease;
+}
+.item-list li:hover {
+  background: #004400;
+}
+
+/* Formation Cards */
+.formations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+}
+.formation-card {
+  background: #222;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,255,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.formation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0,255,0,0.6);
+}
+.formation-title {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #00ff00;
+}
+.formation-desc {
+  color: #aaa;
+  margin-bottom: 18px;
+  min-height: 50px;
+}
+.follow-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  border: 2px solid #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.follow-link:hover {
+  background-color: #ffffff79;
+  color: #ffffff;
+}
+.whatsapp-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.whatsapp-link:hover {
+  color: #d52222;
+}

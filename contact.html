@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contactez-nous</title>
+  <link rel="stylesheet" href="contact.css" />
+    <link rel="icon" type="image/svg+xml" href="favincon.svg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <div class="form-container">
+    <div class="form-box">
+      <button class="close-btn" onclick="window.history.back()">×</button>
+      <h2>Contactez-nous</h2>
+      <form action="https://formsubmit.co/snowdenyves@gmail.com" method="POST" onsubmit="return showMessage()">
+        <textarea name="message" placeholder="Dites-nous quelque chose..." required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <button type="submit">Envoyer</button>
+      </form>
+      <p id="confirmation" class="confirmation">Votre message a bien été envoyé !</p>
+    </div>
+  </div>
+  <footer class="site-footer">
+  <div class="footer-content">
+  
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/share/1AcwFNxbhj/" target="_blank" class="footer-icon facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/0713621898" target="_blank" class="footer-icon whatsapp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:snowdenyves@gmail.com" class="footer-icon gmail" title="Gmail">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p class="footer-rights">© 2025 TradingPro Tous droits réservés.</p>
+  </div>
+</footer>
+  <script>
+    function showMessage() {
+      document.getElementById("confirmation").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("confirmation").style.display = "none";
+      }, 4000);
+      return true;
+    }
+  </script>
+</body>
+</html>

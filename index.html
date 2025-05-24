@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradingPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="favincon.svg">
+  <!-- À mettre dans le head -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img class="logo-site" src="logo2-fbk.jpeg" alt="">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="marches.html">Marchés</a></li>
+        <li><a href="ressources.html">Ressources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+    <button id="signup">S'inscrire</button>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenue sur TradingPro</h1>
+    <p>Apprenez. Investissez. Réussissez.</p>
+    <button id="start">Commencer</button>
+  </section>
+
+  <section class="candlestick-animation">
+    <div class="candle"></div>
+    <div class="candle delay"></div>
+    <div class="candle delay2"></div>
+    <div class="candle delay"></div>
+    <div class="candle delay2"></div>
+    <div class="candle"></div>
+    <div class="candle delay2"></div>
+    <div class="candle"></div>
+    <div class="candle delay"></div>
+
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>Formation Complète</h3>
+      <p>Devenez un pro du trading avec nos modules interactifs.</p>
+    </div>
+    <div class="feature">
+      <h3>Analyse de Marché</h3>
+      <p>Accédez à des graphiques avancés et des signaux précis.</p>
+    </div>
+    <div class="feature">
+      <h3>Communauté Active</h3>
+      <p>Échangez avec d'autres traders passionnés comme vous.</p>
+    </div>
+  </section>
+  <section class="ticker-section">
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+    {
+      "symbols": [
+        {
+          "proName": "OANDA:USDJPY",
+          "title": "USD/JPY"
+        },
+        {
+          "proName": "OANDA:EURUSD",
+          "title": "EUR/USD"
+        },
+        {
+          "proName": "OANDA:GBPUSD",
+          "title": "GBP/USD"
+        },
+        {
+          "proName": "OANDA:USDCAD",
+          "title": "USD/CAD"
+        },
+        {
+          "proName": "OANDA:AUDUSD",
+          "title": "AUD/USD"
+        }
+      ],
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "adaptive",
+      "locale": "fr"
+    }
+    </script>
+  </div>
+</section>
+  <section class="chart-section">
+  <div class="chart-content">
+    <div class="chart-text">
+      <h2 class="chart-subtitle">Voyez l'opportunité</h2>
+      <h1 class="chart-title">Maîtrisez les marchés</h1>
+      <p class="chart-description">
+        Suivez les tendances en temps réel, exploitez les signaux techniques et dominez les marchés grâce à une interface intuitive et puissante.
+      </p>
+      <a href="outils.html" class="chart-button">Découvrir nos outils</a>
+    </div>
+
+    <div class="chart-visual">
+      <!-- TradingView Widget BEGIN -->
+      <div class="tradingview-widget-container">
+        <div id="tradingview_chart"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+          new TradingView.widget({
+            container_id: "tradingview_chart",
+            width: "100%",
+            height: 400,
+            symbol: "BINANCE:BTCUSDT",
+            interval: "D",
+            timezone: "Etc/UTC",
+            theme: "dark",
+            style: "1",
+            locale: "fr",
+            toolbar_bg: "#0d2233",
+            enable_publishing: false,
+            hide_side_toolbar: false,
+            allow_symbol_change: true,
+            details: true,
+            withdateranges: true,
+            hideideas: true
+          });
+        </script>
+      </div>
+      <!-- TradingView Widget END -->
+    </div>
+  </div>
+</section>
+   <section class="news-section">
+  <h2 class="news-title">News</h2>
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+    {
+      "feedMode": "market",
+      "market": "forex",
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "displayMode": "regular",
+      "width": "100%",
+      "height": 300,
+      "locale": "fr"
+    }
+    </script>
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>Besoin d'aide ? <a href="contact.html" class="footer-link">Contactez-nous</a></p>
+    <p>Ou visitez nos différents réseaux sociaux :</p>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/share/1AcwFNxbhj/" target="_blank" class="footer-icon facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://wa.me/0713621898" target="_blank" class="footer-icon whatsapp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:snowdenyves@gmail.com" class="footer-icon gmail" title="Gmail">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p class="footer-rights">© 2025 TradingPro Tous droits réservés.</p>
+  </div>
+</footer>
+
+<!-- Font Awesome (pour les icônes) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+ <!-- MODALE D'INSCRIPTION AVEC ENVOI EMAIL + MESSAGE -->
+<div class="modal" id="signupModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Formulaire d'inscription</h2>
+
+    <form id="signupForm" action="https://formsubmit.co/snowdenyves@gmail.com" method="POST" onsubmit="return handleSubmit()">
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="Nom" placeholder="Votre nom complet" required />
+
+      <label for="email">Adresse e-mail</label>
+      <input type="email" id="email" name="Email" placeholder="Votre e-mail" required />
+
+      <label for="number">Numéro</label>
+      <input type="tel" id="number" name="Numéro" placeholder="Ex: +2250700000000" required />
+      <div class="form-group">
+  <label class="label-abonnement">Type d'abonnement :</label>
+  <div class="toggle-buttons">
+    <button type="button" class="option-btn active" data-value="mensuel">Mensuel</button>
+    <button type="button" class="option-btn" data-value="annuel">Annuel</button>
+  </div>
+  <input type="hidden" name="type_abonnement" id="typeAbonnement" value="mensuel">
+</div>
+      <button type="submit">S'inscrire</button>
+
+      <p id="confirmationMessage" style="display:none; margin-top:15px; color:green; font-weight:bold;">
+        Votre inscription a bien été prise en compte, nous vous contacterons le plus vite possible.
+      </p>
+     <div class="contact-section mt-8">
+  <p class="text-center text-white mb-2">Ou contactez-nous via :</p>
+  <div class="flex justify-center gap-8">
+    <a href="https://wa.me/2250713621898" target="_blank" class="icon-link1">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=snowdenyves@gmail.com&su=Demande%20d%E2%80%99inscription&body=Bonjour,%20je%20souhaite%20m%E2%80%99inscrire%20%C3%A0%20la%20coop%C3%A9rative.%20Veuillez%20m%E2%80%99envoyer%20les%20informations%20n%C3%A9cessaires." target="_blank" class="icon-link2">
+  <i class="fas fa-envelope"></i>
+</a>
+  </div>
+</div>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Ciblage de la modale et boutons
+  const modal = document.getElementById("signupModal");
+  const openBtn = document.getElementById("signup");
+  const startBtn = document.getElementById("start");
+  const closeBtn = document.querySelector(".close");
+
+  // Ouvrir modale avec bouton S'inscrire
+  openBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  // Ouvrir modale avec bouton Commencer
+  startBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  // Fermer modale avec croix
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fermer modale en cliquant en dehors
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Fonction de gestion après soumission formulaire
+  function handleSubmit() {
+    setTimeout(() => {
+      document.getElementById("confirmationMessage").style.display = "block";
+    }, 100); // message affiché après soumission
+    return true; // laisse le formulaire s'envoyer
+  }
+
+  // Fonction pour fermeture modale appelée depuis onclick dans span.close
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Nouveau code : toggle switch sans checkbox
+  const switchEl = document.getElementById("billing-switch");
+  switchEl.addEventListener("click", () => {
+    const isChecked = switchEl.classList.toggle("checked");
+    switchEl.setAttribute("aria-checked", isChecked);
+  });
+  switchEl.addEventListener("keydown", (e) => {
+    if (e.key === " " || e.key === "Enter") {
+      e.preventDefault();
+      switchEl.click();
+    }
+  });
+</script>
+<script>
+  const buttons = document.querySelectorAll('.option-btn');
+  const hiddenInput = document.getElementById('typeAbonnement');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      hiddenInput.value = btn.getAttribute('data-value');
+    });
+  });
+</script>
+  <script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+              target.scrollIntoView({
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
+</script>
+</body>
+</html>

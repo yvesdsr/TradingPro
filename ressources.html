@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ressources - Trading & Formation</title>
+  <link rel="stylesheet" href="ressources.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Ressources Trading </h1>
+  </header>
+
+  <main>
+
+    <section class="glossaire" data-animate>
+      <h2>Glossaire du Trading</h2>
+      <ul>
+        <li>Analyse Technique : Étude des graphiques pour prédire les mouvements futurs des prix.</li>
+        <li>Analyse Fondamentale : Évaluation des facteurs économiques qui influencent le marché.</li>
+        <li>Bull Market : Marché en hausse prolongée.</li>
+        <li>Bear Market : Marché en baisse prolongée.</li>
+        <li>Levier (Leverage) : Multiplicateur de gains ou pertes sur une position.</li>
+        <li>Stop Loss : Ordre automatique pour limiter les pertes.</li>
+        <li>Take Profit : Ordre automatique pour sécuriser les gains.</li>
+        <li>Spread : Différence entre le prix d'achat et le prix de vente.</li>
+        <li>Volume : Quantité d’actifs échangés sur une période donnée.</li>
+        <li>Volatilité : Mesure de la variation des prix.</li>
+      </ul>
+    </section>
+
+    <section class="youtube-videos" data-animate>
+      <h2>Vidéos Explicatives</h2>
+      <div class="youtube-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M-KMPhYlsW4?si=UMR-Y_1ygSCUg3lc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="youtube-video">
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/uNWAbUCyebw?si=Rc_6XcQs6Oauptfq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="articles" data-animate>
+      <h2>Articles Recommandés</h2>
+      <a href="https://blog.academyxonline.com/articles/le-guide-complet-du-trading/" target="_blank" rel="noopener">Introduction au Trading - Blog academy</a>
+      <a href="https://admiralmarkets.com/fr/cours-de-trading-forex" target="_blank" rel="noopener">Cours complet Forex - Admiralmarkets</a>
+      <a href="https://www.dailyfx.com/education" target="_blank" rel="noopener">Education Trading - DailyFX</a>
+      <a href="https://www.tradingview.com/chart/" target="_blank" rel="noopener">Utiliser TradingView pour l’analyse technique</a>
+      <a href="https://www.fxstreet.com/education" target="_blank" rel="noopener">FXStreet - Ressources et analyses Forex</a>
+    </section>
+
+  </main>
+
+  <script>
+    // Animation simple pour faire apparaître les sections avec un effet profondeur (scale + fade)
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('[data-animate]');
+      sections.forEach((section, index) => {
+        setTimeout(() => {
+          section.style.opacity = '1';
+          section.style.transform = 'scale(1) translateZ(0)';
+        }, index * 300);
+      });
+    });
+  </script>
+
+</body>
+</html>
